@@ -1,8 +1,8 @@
-import NavbarHeader from "@/components/navbar-header";
+import AboutLayout from "@/layouts/about/intex";
 
 function About() {
     return ( 
-
+        <AboutLayout />
     );
 }
 
