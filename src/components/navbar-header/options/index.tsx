@@ -40,7 +40,7 @@ function NavBarOptions() {
                     border border-white/20
                     shadow-lg
                     px-[15px] py-[10px]
-                    rounded-lg
+                    rounded-md
                 '
             >
                 {visibleLinks.map((link) => {

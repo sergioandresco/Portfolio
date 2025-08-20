@@ -6,7 +6,6 @@ const Pictures = [
     { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-5.jpeg", alt: "Sergio Picture 5" },
     { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-6.jpeg", alt: "Sergio Picture 6" },
     { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-7.jpeg", alt: "Sergio Picture 7" },
-    { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-8.jpeg", alt: "Sergio Picture 8" },
     { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-9.jpeg", alt: "Sergio Picture 9" },
     { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-10.jpeg", alt: "Sergio Picture 10" },
     { src: "https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-11.jpeg", alt: "Sergio Picture 11" },

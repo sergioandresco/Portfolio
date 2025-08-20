@@ -39,16 +39,16 @@ function AboutLayout() {
                 <div>
                     <Paragraph 
                         texts={[
-                            "👋 Hi! I'm a Systems Engineer specialized in Frontend Development, based in Colombia.I have over 4.5 years of experience working in the world of web development — building intuitive, high-performance, and visually engaging user interfaces.",
+                            "👋 Hi! I'm a Systems Engineer specialized in Frontend Development, based in Colombia. I have over 4.5 years of experience working in the world of web development — building intuitive, high-performance, and visually engaging user interfaces.",
                             "I'm deeply passionate about coding, video games, soccer, and especially music. Music is a big part of my life — it helps me focus, disconnect from the outside world, and get into the flow while building great digital experiences.",
                             "I consider myself a fun, organized, and highly punctual person. I love collaborating with others, sharing my knowledge, and contributing to meaningful projects that solve real problems through technology.",
-                            "In my free time, I enjoy building new web projects, discovering fresh music, and continuously learning new things.",
+                            "In my free time, I enjoy building new web projects, discovering fresh music, and continuously learning new things. And for a last detail, I love my Country, Colombia 🇨🇴 but I love so much Argentina 🇦🇷 country too.",
                         ]}
                     />
                 </div>
-            </div>
-            <div>
-                <CarouselImages />
+                <div>
+                    <CarouselImages />
+                </div>
             </div>
         </div>
     );
