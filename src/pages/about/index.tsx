@@ -1,4 +1,4 @@
-import AboutLayout from "@/layouts/about/intex";
+import AboutLayout from "@/layouts/about";
 
 function About() {
     return ( 

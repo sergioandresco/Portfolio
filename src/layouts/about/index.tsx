@@ -3,6 +3,7 @@ import VideoHero from "@/components/hero/video";
 import { Separator } from "@/components/ui/separator";
 import Title from "@/components/title";
 import Paragraph from "@/components/paragraph";
+import CarouselImages from "@/components/carousel";
 
 function AboutLayout() {
     return (
@@ -45,6 +46,9 @@ function AboutLayout() {
                         ]}
                     />
                 </div>
+            </div>
+            <div>
+                <CarouselImages />
             </div>
         </div>
     );

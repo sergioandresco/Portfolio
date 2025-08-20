@@ -15,7 +15,7 @@ import {
 import { MoreVertical } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import navLinks from '@/data/navbar';
+import navLinks from '@/data/navbar/index';
 
 
 function NavBarOptions() {
