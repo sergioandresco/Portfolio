@@ -32,7 +32,7 @@ function CarouselImages() {
                         <CarouselItem key={index} className="md:basis-1/4">
                             <div className="p-1">
                                 <Card
-                                    className="border-0"
+                                    className="border-0 shadow-none"
                                 >
                                     <CardContent className="flex items-center justify-center">
                                         <img

@@ -6,6 +6,9 @@ function NavbarHeader() {
     return ( 
         <div 
             className="
+                sticky 
+                top-0 
+                z-50 
                 w-full 
                 flex 
                 items-center 
