@@ -15,7 +15,7 @@ import {
 import { MoreVertical } from 'lucide-react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import navLinks from '@/data/navbar';
+import navLinks from '@/data/navbar/index';
 
 
 function NavBarOptions() {
@@ -40,7 +40,7 @@ function NavBarOptions() {
                     border border-white/20
                     shadow-lg
                     px-[15px] py-[10px]
-                    rounded-lg
+                    rounded-md
                 '
             >
                 {visibleLinks.map((link) => {
