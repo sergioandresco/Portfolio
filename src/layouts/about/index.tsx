@@ -1,5 +1,4 @@
-import TitleHero from "@/components/hero/title";
-import VideoHero from "@/components/hero/video";
+import Hero from "@/components/hero";
 import { Separator } from "@/components/ui/separator";
 import Title from "@/components/title";
 import SubTitle from "@/components/subtitle";
@@ -14,25 +13,11 @@ function AboutLayout() {
     return (
         <div>
             {/* Hero */}
-            <div
-                className="
-                    flex
-                    items-center
-                    h-[80dvh]
-                    sm:h-[65dvh]
-                    flex-col
-                    sm:flex-row
-                    justify-center
-                "
-            >
-                <div>
-                    <TitleHero title="Hi, I'm Sergio. Frontend Developer." />
-                </div>
-                <div>
-                    <VideoHero videoURL="https://microsistem.s3.us-east-2.amazonaws.com/serchAnimation.webm" />
-                </div>
-            </div>
-            <Separator className="mx-4 hidden sm:block flex-1 bg-purple-300/40" />
+            <Hero 
+                title="Hi, I'm Sergio. Frontend Developer."
+                videoUrl="https://microsistem.s3.us-east-2.amazonaws.com/serchAnimation.webm"
+            />
+            <Separator className="hidden sm:block flex-1 bg-purple-300/40" />
             {/* About Me */}
             <div
                 className="
