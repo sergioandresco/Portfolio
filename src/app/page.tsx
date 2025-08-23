@@ -1,9 +1,9 @@
-import About from "@/pages/about";
+import AboutLayout from "@/layouts/about";
 
 export default function Home() {
 	return (
 		<div>
-			<About />
+			<AboutLayout />
 		</div>
 	);
 }

@@ -11,7 +11,7 @@ function Footer() {
                 "
             >
                 <Separator className="mx-4 hidden sm:block flex-1 bg-purple-300/40" />
-                <h2 className="text-white text-[25px] sm:text-[20px] text-center m-0">
+                <h2 className="text-white text-[19px] sm:text-[20px] text-center m-0">
                     © 2025 Sergio Andres Cobos Suarez 🇨🇴
                 </h2>
                 <Separator className="mx-4 hidden sm:block flex-1 bg-purple-300/40" />
