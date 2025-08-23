@@ -23,19 +23,19 @@ function FlipCards() {
                     <div key={index} className="w-full h-[200px] perspective">
                         <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d hover:rotate-y-180">
 
-                            {/* Front */}
-                            <Card className="absolute w-full h-full backface-hidden flex items-center justify-center bg-purple-700 text-white rounded-xl shadow-lg">
+                            {/* Front Card */}
+                            <Card className="absolute border-0 w-full h-full backface-hidden flex items-center justify-center bg-[#4527A0] text-white rounded-xl shadow-[-5px_5px_4px_0px_rgba(255,255,255,0.26)]">
                                 <div className="text-center">
-                                    <p className="text-lg font-bold">{exp.position}</p>
-                                    <p className="text-sm">{exp.company}</p>
-                                    <p className="text-sm">{exp.date}</p>
+                                    <h3 className="text-[25px] font-bold">{exp.position}</h3>
+                                    <h3 className="text-[25px]">{exp.company}</h3>
+                                    <h3 className="text-[25px]">{exp.date}</h3>
                                 </div>
                             </Card>
 
-                            {/* Back */}
-                            <Card className="absolute w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-purple-600 text-white rounded-xl shadow-lg">
+                            {/* Back Card */}
+                            <Card className="absolute border-0 w-full h-full backface-hidden rotate-y-180 flex items-center justify-center bg-[#4527A0] text-white rounded-xl shadow-[-5px_5px_4px_0px_rgba(255,255,255,0.26)]">
                                 <div className="text-center px-4">
-                                    <p>
+                                    <p className="text-[20px]">
                                         {exp.description}
                                     </p>
                                 </div>
