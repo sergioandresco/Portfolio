@@ -26,6 +26,12 @@ function SkillCard() {
                             border-0
                             bg-[#4527A0]
                             text-white
+                            rounded-md
+                            shadow-lg
+                            transition-transform
+                            duration-300
+                            hover:scale-105
+                            hover:shadow-[0_0_20px_rgba(124,77,255,0.6)]
                         "
                     >
                         <div
