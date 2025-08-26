@@ -8,7 +8,6 @@ function ProjectTechnologies({ technologies }: { technologies: string[] }) {
                 flex
                 flex-col
                 px-[18px]
-                py-[90px]
             "
         >
             <div>

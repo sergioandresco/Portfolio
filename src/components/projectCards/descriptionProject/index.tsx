@@ -5,7 +5,6 @@ function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string,
                 flex
                 flex-col
                 px-[18px]
-                py-[90px]
             "
         >
             <div>
