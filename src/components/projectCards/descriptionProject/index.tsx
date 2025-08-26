@@ -20,12 +20,18 @@ function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string,
                 />
             </div>
             <div>
-                <h2>
+                <h2
+                    className="
+                        text-[50px]
+                        sm:text-[88px]
+                        text-center
+                    "
+                >
                     Overview
                 </h2>
             </div>
             <div>
-                <p>
+                <p className="text-[22px]">
                     {description}
                 </p>
             </div>
