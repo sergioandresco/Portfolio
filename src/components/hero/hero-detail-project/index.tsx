@@ -13,9 +13,11 @@ function HeroDetailProject({title, projectUrl, projectRepository} : {title: stri
                 sm:flex-col
                 justify-center
                 gap-[25px]
-                py-[90px]
+                py-0
+                md:py-[90px]
                 mx-[18px]
-                my-[90px]
+                my-0
+                md:my-[90px]
             "
         >
             <div>
@@ -41,8 +43,12 @@ function HeroDetailProject({title, projectUrl, projectRepository} : {title: stri
             <div
                 className="
                     flex
-                    flex-row
-                    gap-[46px]
+                    flex-col
+                    items-center
+                    md:items-start
+                    md:flex-row
+                    gap-[3px]
+                    md:gap-[46px]
                 "
             >
                 <div>
@@ -55,8 +61,8 @@ function HeroDetailProject({title, projectUrl, projectRepository} : {title: stri
                             gap-[14px]
                         "
                     >
-                        <SlLink color="white" className="w-[35px] h-[35px]"/>
-                        <p className="text-[35px]">
+                        <SlLink color="white" className="w-[30px] md:w-[35px] h-[30px] md:h-[35px]"/>
+                        <p className="text-[35px] md:text-[35px]">
                             Live
                         </p>
                     </a>
@@ -71,8 +77,8 @@ function HeroDetailProject({title, projectUrl, projectRepository} : {title: stri
                             gap-[14px]
                         "
                     >
-                        <FaGithub color="white" className="w-[35px] h-[35px]"/>
-                        <p className="text-[35px]">
+                        <FaGithub color="white" className="w-[30px] md:w-[35px] h-[30px] md:h-[35px]"/>
+                        <p className="text-[30px] md:text-[35px]">
                             Repository
                         </p>
                     </a>

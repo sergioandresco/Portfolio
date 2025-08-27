@@ -5,7 +5,8 @@ function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string,
                 flex
                 flex-col
                 px-[18px]
-                my-[90px]
+                my-[40px]
+                md:my-[90px]
             "
         >
             <div>
@@ -21,7 +22,8 @@ function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string,
             </div>
             <div
                 className="
-                    my-[90px]
+                    my-[40px]
+                    md:my-[90px]
                 "
             >
                 <h2
@@ -35,7 +37,7 @@ function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string,
                 </h2>
             </div>
             <div>
-                <p className="text-[22px]">
+                <p className="text-[18px] md:text-[22px] text-justify md:text-start">
                     {description}
                 </p>
             </div>

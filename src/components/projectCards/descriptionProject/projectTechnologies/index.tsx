@@ -8,7 +8,8 @@ function ProjectTechnologies({ technologies }: { technologies: string[] }) {
                 flex
                 flex-col
                 px-[18px]
-                my-[90px]
+                my-[40px]
+                md:my-[90px]
             "
         >
             <div>
@@ -28,7 +29,8 @@ function ProjectTechnologies({ technologies }: { technologies: string[] }) {
                     grid-cols-2
                     sm:grid-cols-5
                     gap-[25px]
-                    mt-[90px]
+                    mt-[40px]
+                    md:mt-[90px]
                     mb-0
                 "
             >
@@ -61,7 +63,7 @@ function ProjectTechnologies({ technologies }: { technologies: string[] }) {
                                     "
                                 >
                                     <skill.icon color="white" className="w-[40px] h-[40px]"/>
-                                    <h2 className="text-[30px]">
+                                    <h2 className="text-[25px] md:text-[30px]">
                                         {skill.technologie}
                                     </h2>
                                 </div>
