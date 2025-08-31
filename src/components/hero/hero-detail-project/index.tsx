@@ -60,6 +60,7 @@ function HeroDetailProject({title, projectUrl, projectRepository} : {title: stri
                             items-center
                             gap-[14px]
                         "
+                        target="_blank"
                     >
                         <SlLink color="white" className="w-[30px] md:w-[35px] h-[30px] md:h-[35px]"/>
                         <p className="text-[35px] md:text-[35px]">
@@ -76,6 +77,7 @@ function HeroDetailProject({title, projectUrl, projectRepository} : {title: stri
                             items-center
                             gap-[14px]
                         "
+                        target="_blank"
                     >
                         <FaGithub color="white" className="w-[30px] md:w-[35px] h-[30px] md:h-[35px]"/>
                         <p className="text-[30px] md:text-[35px]">
