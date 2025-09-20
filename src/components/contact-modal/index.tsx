@@ -43,21 +43,38 @@ export default function ChatBotModal({
                             className="
                                 flex 
                                 flex-row
+                                justify-between
+                                items-center
                                 gap-1
+                                py-4
+                                px-4
+                                bg-[#512DA8]
                             "
                         >
-                            <div>
-                                <Avatar>
-                                    <AvatarImage src="https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-avatar.jpeg" />
+                            <div
+                                className="
+                                    flex
+                                    items-center
+                                    gap-4
+                                "
+                            >
+                                <Avatar className="w-[50px] h-[50px]">
+                                    <AvatarImage 
+                                        className="object-cover" 
+                                        src="https://microsistem.s3.us-east-2.amazonaws.com/portfolio/sergio-avatar.jpeg" 
+                                        alt="Sergio Bot"
+                                    />
                                 </Avatar>
                                 <div>
                                     <div>
-                                        <h2>
+                                        <h2
+                                            className="text-xl font-medium"
+                                        >
                                             Sergio Bot
                                         </h2>
                                     </div>
                                     <div>
-                                        <p>
+                                        <p className="text-lg">
                                             Ask me a question
                                         </p>
                                     </div>
@@ -66,9 +83,9 @@ export default function ChatBotModal({
                             <div>
                                 <button
                                     onClick={onClose}
-                                    className="p-1 rounded-full hover:bg-white/10 transition"
+                                    className="p-1 rounded-full hover:bg-white/10 transition cursor-pointer"
                                 >
-                                    <IoIosClose className="w-5 h-5 text-white" />
+                                    <IoIosClose className="text-white w-11 h-11"/>
                                 </button>
                             </div>
                         </ModalHeader>
