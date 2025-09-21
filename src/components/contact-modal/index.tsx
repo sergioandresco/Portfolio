@@ -1,16 +1,17 @@
 "use client";
 
+import { useState } from "react";
 import {
     Modal,
     ModalContent,
     ModalHeader,
     ModalBody,
-    ModalFooter,
     useDisclosure,
 } from "@heroui/modal";
 import { Button } from "@heroui/button";
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { IoIosClose } from "react-icons/io";
+import { initialMessages, botReplies, type Message } from "@/data/chatBot";
 
 export default function ChatBotModal({
     open,
@@ -19,6 +20,18 @@ export default function ChatBotModal({
     open: boolean;
     setOpen: (v: boolean) => void;
 }) {
+
+    const [messages, setMessages] = useState<Message[]>(initialMessages);
+
+    const handleOptionClick = (option: string) => {
+        const newMessages: Message[] = [...messages, { sender: 'user', text: option }];
+
+        if (botReplies[option]) {
+            newMessages.push({ sender: 'bot', text: botReplies[option] });
+        }
+        setMessages(newMessages);
+    }
+
     return (
         <Modal
             className="
@@ -89,33 +102,49 @@ export default function ChatBotModal({
                                 </button>
                             </div>
                         </ModalHeader>
-                        <ModalBody>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                                quam.
-                            </p>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam pulvinar risus non
-                                risus hendrerit venenatis. Pellentesque sit amet hendrerit risus, sed porttitor
-                                quam.
-                            </p>
-                            <p>
-                                Magna exercitation reprehenderit magna aute tempor cupidatat consequat elit dolor
-                                adipisicing. Mollit dolor eiusmod sunt ex incididunt cillum quis. Velit duis sit
-                                officia eiusmod Lorem aliqua enim laboris do dolor eiusmod. Et mollit incididunt
-                                nisi consectetur esse laborum eiusmod pariatur proident Lorem eiusmod et. Culpa
-                                deserunt nostrud ad veniam.
-                            </p>
+                        <ModalBody className="gap-2.5 overflow-y-auto">
+                            {messages.map((msg, i) => (
+                                <p
+                                    key={i}
+                                    className={`p-3 rounded-md max-w-[80%] ${
+                                        msg.sender === "bot"
+                                        ? "bg-[#7E57C2] text-white self-start"
+                                        : "bg-[#9575CD] text-white self-end ml-auto"
+                                    }`}
+                                >
+                                    {msg.text}
+                                </p>
+                            ))}
+                            <div
+                                className="
+                                    flex
+                                    flex-col
+                                    items-end
+                                    gap-2
+                                    mt-4
+                                "
+                            >
+                                {Object.keys(botReplies).map((option) => (
+                                    <button
+                                        key={option}
+                                        onClick={() => handleOptionClick(option)}
+                                        className="
+                                            bg-[#9575CD] 
+                                            text-white 
+                                            px-4 
+                                            py-2 
+                                            rounded-md 
+                                            shadow-md 
+                                            hover:bg-[#7E57C2] 
+                                            transition 
+                                            cursor-pointer
+                                        "
+                                    >
+                                        {option}
+                                    </button>
+                                ))}
+                            </div>
                         </ModalBody>
-                        <ModalFooter>
-                            <Button color="danger" variant="light" onPress={onClose}>
-                                Close
-                            </Button>
-                            <Button color="primary" onPress={onClose}>
-                                Action
-                            </Button>
-                        </ModalFooter>
                     </>
                 )}
             </ModalContent>
