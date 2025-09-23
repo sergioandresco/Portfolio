@@ -6,9 +6,7 @@ import {
     ModalContent,
     ModalHeader,
     ModalBody,
-    useDisclosure,
 } from "@heroui/modal";
-import { Button } from "@heroui/button";
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { IoIosClose } from "react-icons/io";
 import { initialMessages, botReplies, type Message } from "@/data/chatBot";
@@ -22,15 +20,28 @@ export default function ChatBotModal({
 }) {
 
     const [messages, setMessages] = useState<Message[]>(initialMessages);
+    const [selectedOption, setSelectedOption] = useState<string | null>(null);
 
     const handleOptionClick = (option: string) => {
-        const newMessages: Message[] = [...messages, { sender: 'user', text: option }];
+        setSelectedOption(option);
+        setMessages((prev) => [...prev, { sender: "user", text: option }]);
 
-        if (botReplies[option]) {
-            newMessages.push({ sender: 'bot', text: botReplies[option] });
+        const replies = botReplies[option];
+        if (replies) {
+            replies.forEach((reply, index) => {
+                setTimeout(() => {
+                    setMessages((prev) => [
+                        ...prev,
+                        { sender: "bot", text: reply },
+                    ]);
+                }, (index + 1) * 1000);
+            });
+            const totalDelay = replies.length * 1000;
+            setTimeout(() => {
+                setSelectedOption(null);
+            }, totalDelay + 500);
         }
-        setMessages(newMessages);
-    }
+    };
 
     return (
         <Modal
@@ -115,35 +126,37 @@ export default function ChatBotModal({
                                     {msg.text}
                                 </p>
                             ))}
-                            <div
-                                className="
-                                    flex
-                                    flex-col
-                                    items-end
-                                    gap-2
-                                    mt-4
-                                "
-                            >
-                                {Object.keys(botReplies).map((option) => (
-                                    <button
-                                        key={option}
-                                        onClick={() => handleOptionClick(option)}
-                                        className="
-                                            bg-[#9575CD] 
-                                            text-white 
-                                            px-4 
-                                            py-2 
-                                            rounded-md 
-                                            shadow-md 
-                                            hover:bg-[#7E57C2] 
-                                            transition 
-                                            cursor-pointer
-                                        "
-                                    >
-                                        {option}
-                                    </button>
-                                ))}
-                            </div>
+                            {!selectedOption && (
+                                <div
+                                    className="
+                                        flex
+                                        flex-col
+                                        items-end
+                                        gap-2
+                                        mt-4
+                                    "
+                                >
+                                    {Object.keys(botReplies).map((option) => (
+                                        <button
+                                            key={option}
+                                            onClick={() => handleOptionClick(option)}
+                                            className="
+                                                bg-[#9575CD] 
+                                                text-white 
+                                                px-4 
+                                                py-2 
+                                                rounded-md 
+                                                shadow-md 
+                                                hover:bg-[#7E57C2] 
+                                                transition 
+                                                cursor-pointer
+                                            "
+                                        >
+                                            {option}
+                                        </button>
+                                    ))}
+                                </div>
+                            )}
                         </ModalBody>
                     </>
                 )}
