@@ -1,4 +1,7 @@
 function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string, nameProject: string, description: string}) {
+    
+    const isVideo = gifUrl.endsWith('.mp4') || gifUrl.endsWith('.webm');
+    
     return ( 
         <div
             className="
@@ -10,15 +13,33 @@ function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string,
             "
         >
             <div>
-                <img 
-                    src={gifUrl} 
-                    alt={nameProject} 
-                    className="
-                        rounded-md
-                        border-4
-                        border-white
-                    "
-                />
+                {isVideo ? (
+                    <video
+                        src={gifUrl}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="
+                            rounded-md
+                            border-4
+                            border-white
+                            w-full
+                            h-auto
+                        "
+                    />
+                ) : (
+                    <img 
+                        src={gifUrl} 
+                        alt={nameProject} 
+                        className="
+                            rounded-md
+                            border-4
+                            border-white
+                        "
+                    />
+                )
+                }
             </div>
             <div
                 className="

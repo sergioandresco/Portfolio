@@ -19,20 +19,20 @@ export const initialMessages: Message[] = [
 ];
 
 export const botReplies: Record<string, string[]> = {
-    "Looking for your old portfolio": [
-      "Sure! You can still check my old portfolio here: [Old Portfolio Link]",
-    ],
     "Just saying hello!": [
       "Hello there! 👋",
       "How are you doing today?",
       "I hope you're enjoying browsing Sergio's portfolio!",
     ],
-    "Interested in mentorship": [
-      "Awesome! Sergio loves mentoring.",
-      "Please reach out through the contact form!",
+    "Interested in the Sergio's projects": [
+      "Awesome! Sergio has worked on some cool projects.",
+      "You can find the projects section on his portfolio.",
+      "But if you need the code repositories, enter in the next link 👇",
+      "https://github.com/sergioandresco",
     ],
     "We'd like to hire you": [
       "That's great! 🚀",
-      "You can contact Sergio directly via the contact page.",
+      "You can contact Sergio directly through the following channels.",
+      "LinkedIn: https://www.linkedin.com/in/sergio-andres-cobos-suarez-942637219/",
     ],
   };

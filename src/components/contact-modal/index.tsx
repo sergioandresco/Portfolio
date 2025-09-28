@@ -117,7 +117,7 @@ export default function ChatBotModal({
                             {messages.map((msg, i) => (
                                 <p
                                     key={i}
-                                    className={`p-3 rounded-md max-w-[80%] ${
+                                    className={`p-3 rounded-md min-w-[fit-content] ${
                                         msg.sender === "bot"
                                         ? "bg-[#7E57C2] text-white self-start"
                                         : "bg-[#9575CD] text-white self-end ml-auto"
