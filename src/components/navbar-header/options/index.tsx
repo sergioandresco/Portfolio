@@ -18,7 +18,7 @@ import { usePathname } from 'next/navigation';
 import navLinks from '@/data/navbar/index';
 import { useState } from 'react';
 import ChatBotModal from '@/components/contact-modal';
-
+import NavLink from '@/types/navLink';
 
 function NavBarOptions() {
 
@@ -28,12 +28,12 @@ function NavBarOptions() {
 
     const [chatOpen, setChatOpen] = useState(false);
 
-    const handleContactClick = (e) => {
+    const handleContactClick = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
         setChatOpen(true);
     };
 
-    const renderLink = (link, isDropdown = false) => {
+    const renderLink = (link: NavLink, isDropdown = false) => {
         if (link.name === "Contact") {
             return (
                 <button
