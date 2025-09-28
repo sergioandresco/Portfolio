@@ -6,8 +6,6 @@ import {
     Carousel,
     CarouselContent,
     CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
 } from "@/components/ui/carousel";
 import AutoScroll from 'embla-carousel-auto-scroll';
 import Pictures from "@/data/carousel";
