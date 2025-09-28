@@ -11,21 +11,38 @@
   h1 {
     font-family: var(--font-acorn), sans-serif;
     font-weight: 700;
+    color: white;
   }
 
   h2 {
     font-family: var(--font-acorn), sans-serif;
     font-weight: 500;
+    color: white;
   }
 
   h3 {
     font-family: var(--font-acorn), sans-serif;
     font-weight: 400;
+    color: white;
   }
 
   p {
     font-family: var(--font-gt-planar), sans-serif;
     font-weight: 300;
+    color: white;
   }
 
+}
+
+.perspective {
+  perspective: 1000px;
+}
+.transform-style-preserve-3d {
+  transform-style: preserve-3d;
+}
+.backface-hidden {
+  backface-visibility: hidden;
+}
+.rotate-y-180 {
+  transform: rotateY(180deg);
 }

@@ -1,0 +1,69 @@
+function DescriptionProject({gifUrl, nameProject, description}: {gifUrl: string, nameProject: string, description: string}) {
+    
+    const isVideo = gifUrl.endsWith('.mp4') || gifUrl.endsWith('.webm');
+    
+    return ( 
+        <div
+            className="
+                flex
+                flex-col
+                px-[18px]
+                my-[40px]
+                md:my-[90px]
+            "
+        >
+            <div>
+                {isVideo ? (
+                    <video
+                        src={gifUrl}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="
+                            rounded-md
+                            border-4
+                            border-white
+                            w-full
+                            h-auto
+                        "
+                    />
+                ) : (
+                    <img 
+                        src={gifUrl} 
+                        alt={nameProject} 
+                        className="
+                            rounded-md
+                            border-4
+                            border-white
+                        "
+                    />
+                )
+                }
+            </div>
+            <div
+                className="
+                    my-[40px]
+                    md:my-[90px]
+                "
+            >
+                <h2
+                    className="
+                        text-[50px]
+                        sm:text-[88px]
+                        text-center
+                    "
+                >
+                    Overview
+                </h2>
+            </div>
+            <div>
+                <p className="text-[18px] md:text-[22px] text-justify md:text-start">
+                    {description}
+                </p>
+            </div>
+        </div>
+    );
+}
+
+export default DescriptionProject;
