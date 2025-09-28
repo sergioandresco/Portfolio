@@ -1,4 +1,6 @@
-const navLinks = [
+import NavLink from "../../types/navLink";
+
+const navLinks: NavLink[] = [
     { name: "About /", href: "/" },
     { name: "Experience", href: "/experience" },
     { name: "Skills", href: "/skills" },
